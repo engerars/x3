@@ -1,0 +1,25 @@
+{
+  "name": "x3-cpc-vision",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Runtime local server for x3 modular app",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "open": "start http://localhost:8080",
+    "dev:open": "powershell -NoProfile -Command \"Start-Process 'http://localhost:8080'; node server.js\"",
+    "test": "node --test tests/**/*.test.mjs",
+    "check:arch": "node scripts/check-architecture.js",
+    "check:syntax": "node scripts/check-syntax.js",
+    "check": "npm run check:arch && npm run check:syntax",
+    "release": "semantic-release"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^11.1.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^10.3.5",
+    "@semantic-release/release-notes-generator": "^12.1.0",
+    "semantic-release": "^24.2.3"
+  }
+}
